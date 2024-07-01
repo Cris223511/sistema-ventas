@@ -3,7 +3,7 @@
 class db
 {
 	private $servidor = "localhost";
-	private $db = "hakan";
+	private $db = "sistema_ventas";
 	private $port = 3306;
 	private $charset = "utf8";
 	private $usuario = "root";

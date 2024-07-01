@@ -22,7 +22,7 @@ if (!isset($_SESSION["nombre"])) {
               <h4><strong>Soporte: </strong></h4>
               <p>Si necesitas ayuda o más información, contáctate con nosotros llamando al <strong>+51 992 719 552</strong></p>
               <h4><strong>Empresa: </strong></h4>
-              <p>Hakan Importa S.A.C.</p>
+              <p>Sistema de Ventas S.A.C.</p>
             </div>
           </div>
         </div>

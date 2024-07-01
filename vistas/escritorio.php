@@ -140,21 +140,21 @@ if (!isset($_SESSION["nombre"])) {
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 marco" style="padding-right: 5px">
                       <div class="tarjeta1 bg-red">
                         <div>
-                          <h1>S/. <?php echo number_format($totalVentas, 2) ?></h1>
+                          <h1>S/. <?php // echo number_format($totalVentas, 2) ?></h1>
                           <span>Total de ventas</span>
                         </div>
                         <i class="fa fa-money ticket1" style="font-size: 60px;"></i>
                       </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 marco" style="padding-left: 5px;">
+                    <!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 marco" style="padding-left: 5px;">
                       <div class="tarjeta2 bg-yellow">
                         <div>
-                          <h1>S/. <?php echo number_format($totalVentasProforma, 2) ?></h1>
+                          <h1>S/. <?php // echo number_format($totalVentasProforma, 2) ?></h1>
                           <span>Total de proformas</span>
                         </div>
                         <i class="fa fa-usd ticket2" style="font-size: 60px;"></i>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -168,13 +168,13 @@ if (!isset($_SESSION["nombre"])) {
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <div class="box box-primary">
                     <div class="box-body">
                       <canvas id="proformas" width="300" height="180"></canvas>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -267,69 +267,69 @@ if (!isset($_SESSION["nombre"])) {
         }
       });
 
-      var ctx = document.getElementById("proformas").getContext('2d');
-      var proformas = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: [<?php echo $fechasp; ?>],
-          datasets: [{
-            barPercentage: 0.5,
-            label: 'Proformas en S/ de los últimos 10 días',
-            data: [<?php echo $totalesp; ?>],
-            backgroundColor: [
-              'rgba(0,166,149,255)',
-              'rgba(0,166,149,255)',
-              'rgba(0,166,149,255)',
-              'rgba(0,166,149,255)',
-              'rgba(0,166,149,255)',
-              'rgba(0,166,149,255)',
-              'rgba(0,166,149,255)',
-              'rgba(0,166,149,255)',
-              'rgba(0,166,149,255)',
-              'rgba(0,166,149,255)',
-            ],
-            borderColor: [
-              'rgba(0,166,149,255)',
-              'rgba(0,166,149,255)',
-              'rgba(0,166,149,255)',
-              'rgba(0,166,149,255)',
-              'rgba(0,166,149,255)',
-              'rgba(0,166,149,255)',
-              'rgba(0,166,149,255)',
-              'rgba(0,166,149,255)',
-              'rgba(0,166,149,255)',
-              'rgba(0,166,149,255)',
-            ],
-            borderWidth: 1,
-            borderRadius: {
-              topLeft: 10,
-              topRight: 10
-            }
-          }]
-        },
-        options: {
-          scales: {
-            y: {
-              suggestedMax: max3
-            }
-          },
-          plugins: {
-            datalabels: { //esta es la configuración de pluggin datalabels
-              anchor: 'end',
-              align: 'top',
-              formatter: function(value, context) {
-                return value.toLocaleString('es-PE', {
-                  minimumFractionDigits: 2,
-                  maximumFractionDigits: 2
-                }).replace(',', '.');
-              },
-              font: {
-                weight: 'bold'
-              }
-            }
-          }
-        }
-      });
+      // var ctx = document.getElementById("proformas").getContext('2d');
+      // var proformas = new Chart(ctx, {
+      //   type: 'bar',
+      //   data: {
+      //     labels: [<?php // echo $fechasp; ?>],
+      //     datasets: [{
+      //       barPercentage: 0.5,
+      //       label: 'Proformas en S/ de los últimos 10 días',
+      //       data: [<?php // echo $totalesp; ?>],
+      //       backgroundColor: [
+      //         'rgba(0,166,149,255)',
+      //         'rgba(0,166,149,255)',
+      //         'rgba(0,166,149,255)',
+      //         'rgba(0,166,149,255)',
+      //         'rgba(0,166,149,255)',
+      //         'rgba(0,166,149,255)',
+      //         'rgba(0,166,149,255)',
+      //         'rgba(0,166,149,255)',
+      //         'rgba(0,166,149,255)',
+      //         'rgba(0,166,149,255)',
+      //       ],
+      //       borderColor: [
+      //         'rgba(0,166,149,255)',
+      //         'rgba(0,166,149,255)',
+      //         'rgba(0,166,149,255)',
+      //         'rgba(0,166,149,255)',
+      //         'rgba(0,166,149,255)',
+      //         'rgba(0,166,149,255)',
+      //         'rgba(0,166,149,255)',
+      //         'rgba(0,166,149,255)',
+      //         'rgba(0,166,149,255)',
+      //         'rgba(0,166,149,255)',
+      //       ],
+      //       borderWidth: 1,
+      //       borderRadius: {
+      //         topLeft: 10,
+      //         topRight: 10
+      //       }
+      //     }]
+      //   },
+      //   options: {
+      //     scales: {
+      //       y: {
+      //         suggestedMax: max3
+      //       }
+      //     },
+      //     plugins: {
+      //       datalabels: { //esta es la configuración de pluggin datalabels
+      //         anchor: 'end',
+      //         align: 'top',
+      //         formatter: function(value, context) {
+      //           return value.toLocaleString('es-PE', {
+      //             minimumFractionDigits: 2,
+      //             maximumFractionDigits: 2
+      //           }).replace(',', '.');
+      //         },
+      //         font: {
+      //           weight: 'bold'
+      //         }
+      //       }
+      //     }
+      //   }
+      // });
     </script>
 <?php
 

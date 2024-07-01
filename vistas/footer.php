@@ -2,7 +2,7 @@
       <div class="pull-right hidden-xs">
         <b>Version</b> 5.0.0
       </div>
-      <strong>Copyright &copy; 2024 <a href="escritorio.php" style="color: #002a8e;">Hakan Importa S.A.C</a>.</strong> Todos los derechos reservados.
+      <strong>Copyright &copy; 2024 <a href="escritorio.php" style="color: #002a8e;">Sistema de Ventas S.A.C</a>.</strong> Todos los derechos reservados.
     </footer>
     <!-- jQuery -->
     <script src="../public/js/jquery-3.1.1.min.js"></script>
@@ -84,7 +84,7 @@
           return match.charAt(0).toUpperCase() + match.slice(1).toLowerCase();
         });
 
-        document.title = fullTitle + " | Hakan Import S.A.C.";
+        document.title = fullTitle + " | Sistema de Ventas S.A.C.";
       }
 
       setTitleFromBoxTitle('.box-title');

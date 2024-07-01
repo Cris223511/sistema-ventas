@@ -218,8 +218,8 @@ $cargo_login = $_SESSION['cargo_detalle'];
   <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../public/css/_all-skins.min.css">
-  <link rel="apple-touch-icon" href="../public/img/icon.png">
-  <link rel="shortcut icon" href="../public/img/icon.ico">
+  <link rel="apple-touch-icon" href="../public/img/icon-img.png">
+  <link rel="shortcut icon" href="../public/img/icon-img.ico">
 
   <!-- DATATABLES -->
   <link rel="stylesheet" type="text/css" href="../public/datatables/jquery.dataTables.min.css">
@@ -234,8 +234,8 @@ $cargo_login = $_SESSION['cargo_detalle'];
 
     <header class="main-header" style="box-shadow: 0px 0px 15px -7px; position: sticky !important; width: 100%">
       <a href="escritorio.php" class="logo" style="color: white !important; background-color: #002a8e !important;">
-        <span class="logo-mini"><b>H.I.</b></span>
-        <span class="logo-lg" style="font-size: 15px;"><b>Hakan Import S.A.C.</b></span>
+        <span class="logo-mini"><b>S.V.</b></span>
+        <span class="logo-lg" style="font-size: 15px;"><b>Sistema de Ventas S.A.C.</b></span>
       </a>
       <nav class="navbar" role="navigation" style="background-color: #002a8e !important;">
         <div style="display: flex; align-items: center; float: left;">
@@ -254,7 +254,7 @@ $cargo_login = $_SESSION['cargo_detalle'];
                 <li class="user-header" style="background: #002a8e !important;">
                   <img src="../files/usuarios/<?php echo $_SESSION['imagen']; ?>" class="img-circle" alt="User Image">
                   <p style="color: white !important;">
-                    Hakan Import S.A.C.
+                    Sistema de Ventas S.A.C.
                     <small>nuestro contacto: +51 992 719 552</small>
                   </p>
                 </li>
