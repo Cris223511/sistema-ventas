@@ -999,16 +999,16 @@ class FPDF
 		$this->MultiCell(0, 5, mb_convert_encoding(mb_strtoupper("Estado: $estado"), 'ISO-8859-1', 'UTF-8'), 0, 'L', false);
 
 		# LOGO #
-		$this->Image('../files/logo_reportes/' . $logo, 14, 13, null, 12, $ext_logo);
+		$this->Image('../files/logo_reportes/' . $logo, 25, 12, 20, 20, $ext_logo);
 
 		# EMPRESA #
-		$this->SetY($y + 26);
+		$this->SetY($y + 32.5);
 		$this->SetFont('hypermarket', '', 10);
 		$this->SetTextColor(0, 0, 0);
 		$this->MultiCell(0, 5, mb_convert_encoding(mb_strtoupper("$empresa"), 'ISO-8859-1', 'UTF-8'), 0, 'C', false);
 
 		# TIPO DE COMPROBANTE #
-		$this->SetY($y + 32);
+		$this->SetY($y + 37);
 		$this->SetFont('hypermarket', '', 10);
 		$this->SetTextColor(0, 0, 0);
 		$this->MultiCell(0, 5, mb_convert_encoding(mb_strtoupper("$tipo_comprobante"), 'ISO-8859-1', 'UTF-8'), 0, 'C', false);

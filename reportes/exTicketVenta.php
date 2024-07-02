@@ -53,7 +53,7 @@ $pdf->Ln(1);
 $pdf->SetX(1.5);
 $pdf->Cell(0, -2, utf8_decode("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"), 0, 0, 'L');
 
-$y += 42;
+$y += 46;
 
 # Encabezado y datos del ticket #
 $pdf->encabezado2(
@@ -67,7 +67,7 @@ $pdf->encabezado2(
 $pdf->SetFont('hypermarket', '', 10);
 
 # Separador #
-$pdf->Ln(3);
+$pdf->Ln(2);
 $pdf->SetX(1.5);
 $pdf->Cell(0, -2, utf8_decode("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"), 0, 0, 'L');
 $pdf->Ln(1);
@@ -91,7 +91,7 @@ $aligns = array(
     "SUBTOTAL" => "R"
 );
 
-$y += 24.5;
+$y += 24;
 
 $pdf->SetFont('hypermarket', '', 8.5);
 $pdf->addCols($cols, $aligns, $y);

@@ -124,6 +124,8 @@ if (!isset($_SESSION["nombre"])) {
                       <button style="height: 32px;" class="btn btn-success" onclick="resetear()"><i class="fa fa-repeat"></i></button>
                     </div>
                   </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="contenedorPagos" style="padding: 5px; margin: 0px;">
+                  </div>
                 </div>
               </div>
               <div class="panel-body listadoregistros" style="background-color: #ecf0f5 !important; padding-left: 0 !important; padding-right: 0 !important; height: max-content;">

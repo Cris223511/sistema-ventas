@@ -657,7 +657,7 @@ class PDF_Invoice extends FPDF
 	function encabezado($y, $logo, $ext_logo, $ruc, $num_comprobante, $tipo_comprobante, $estado, $usuario, $content1, $empresa, $content2)
 	{
 		# LOGO #
-		$this->Image('../files/logo_reportes/' . $logo, 13, 10, null, 16, $ext_logo);
+		$this->Image('../files/logo_reportes/' . $logo, 15, 10, 30, 30, $ext_logo);
 
 		# EMPRESA #
 		$this->SetXY(13.5, $y + 41);

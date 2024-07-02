@@ -16,10 +16,10 @@ if (!isset($_SESSION["nombre"])) {
     $cargo = $_SESSION["cargo"];
 
     $ventas10 = $consulta->ventasultimos_10dias();
-    $proformas10 = $consulta->proformasultimos_10dias();
+    // $proformas10 = $consulta->proformasultimos_10dias();
 
     $totalVentas = $consulta->totalVentas()["total"];
-    $totalVentasProforma = $consulta->totalVentasProforma()["total"];
+    // $totalVentasProforma = $consulta->totalVentasProforma()["total"];
 
     //Datos para mostrar el gráfico de barras de las ventas
     $fechasv = '';
@@ -33,17 +33,17 @@ if (!isset($_SESSION["nombre"])) {
     $fechasv = substr($fechasv, 0, -1);
     $totalesv = substr($totalesv, 0, -1);
 
-    //Datos para mostrar el gráfico de barras de las ventas
-    $fechasp = '';
-    $totalesp = '';
-    while ($regfechap = $proformas10->fetch_object()) {
-      $fechasp = $fechasp . '"' . $regfechap->fecha . '",';
-      $totalesp = $totalesp . $regfechap->total . ',';
-    }
+    // //Datos para mostrar el gráfico de barras de las ventas
+    // $fechasp = '';
+    // $totalesp = '';
+    // while ($regfechap = $proformas10->fetch_object()) {
+    //   $fechasp = $fechasp . '"' . $regfechap->fecha . '",';
+    //   $totalesp = $totalesp . $regfechap->total . ',';
+    // }
 
-    //Quitamos la ultima coma
-    $fechasp = substr($fechasp, 0, -1);
-    $totalesp = substr($totalesp, 0, -1);
+    // //Quitamos la ultima coma
+    // $fechasp = substr($fechasp, 0, -1);
+    // $totalesp = substr($totalesp, 0, -1);
 ?>
     <style>
       .tarjeta1 {
@@ -198,10 +198,10 @@ if (!isset($_SESSION["nombre"])) {
       }
 
       let totalesv = [<?php echo $totalesv; ?>];
-      let totalesp = [<?php echo $totalesp; ?>];
+      // let totalesp = [<?php // echo $totalesp; ?> ];
 
       let max2 = ajustarMaximo(Math.max(...totalesv));
-      let max3 = ajustarMaximo(Math.max(...totalesp));
+      // let max3 = ajustarMaximo(Math.max(...totalesp));
 
       var ctx = document.getElementById("ventas").getContext('2d');
       var ventas = new Chart(ctx, {
@@ -271,11 +271,11 @@ if (!isset($_SESSION["nombre"])) {
       // var proformas = new Chart(ctx, {
       //   type: 'bar',
       //   data: {
-      //     labels: [<?php // echo $fechasp; ?>],
+      //     labels: [ <?php // echo $fechasp; ?> ],
       //     datasets: [{
       //       barPercentage: 0.5,
       //       label: 'Proformas en S/ de los últimos 10 días',
-      //       data: [<?php // echo $totalesp; ?>],
+      //       data: [ <?php // echo $totalesp; ?> ],
       //       backgroundColor: [
       //         'rgba(0,166,149,255)',
       //         'rgba(0,166,149,255)',
