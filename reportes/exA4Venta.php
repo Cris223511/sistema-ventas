@@ -132,7 +132,7 @@ $y += 9;
 while ($reg2 = $rspta2->fetch_object()) {
   $subtotal = ($reg2->cantidad * $reg2->precio_venta) - $reg2->descuento;
 
-  $textoProducto = mb_strtoupper($reg2->articulo);
+  $textoProducto = mb_convert_encoding(mb_strtoupper($reg2->articulo), 'ISO-8859-1', 'UTF-8');
   $anchoTexto = $pdf->GetStringWidth($textoProducto);
 
   $line = array(
@@ -231,7 +231,7 @@ $total_venta = $reg1->total_venta ?? 0.00;
 $izquierda = floor($total_venta);
 $derecha = round(($total_venta - $izquierda) * 100);
 
-$texto = $formatterES->format($izquierda) . " NUEVOS SOLES CON " . $formatterES->format($derecha) . " CÉNTIMOS";
+$texto = mb_convert_encoding($formatterES->format($izquierda), 'ISO-8859-1', 'UTF-8') . " NUEVOS SOLES CON " . mb_convert_encoding($formatterES->format($derecha), 'ISO-8859-1', 'UTF-8') . " CÉNTIMOS";
 $textoEnMayusculas = mb_strtoupper($texto, 'UTF-8');
 
 $y = $pdf->cuerpo(
