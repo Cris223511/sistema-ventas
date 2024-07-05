@@ -140,7 +140,7 @@ if (!isset($_SESSION["nombre"])) {
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 marco" style="padding-right: 5px">
                       <div class="tarjeta1 bg-red">
                         <div>
-                          <h1>S/. <?php // echo number_format($totalVentas, 2) ?></h1>
+                          <h1>S/. <?php echo number_format($totalVentas, 2) ?></h1>
                           <span>Total de ventas</span>
                         </div>
                         <i class="fa fa-money ticket1" style="font-size: 60px;"></i>

@@ -1358,8 +1358,8 @@ if (!isset($_SESSION["nombre"])) {
                       <input type="number" class="form-control" name="comision" id="comision" step="any" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="8" onkeydown="evitarNegativo(event)" onpaste="return false;" onDrop="return false;" min="0" placeholder="Ingrese la comisión del producto.">
                     </div>
                     <div class="form-group col-lg-6 col-md-12">
-                      <label>Talla:</label>
-                      <input type="text" class="form-control" name="talla" id="talla" maxlength="15" placeholder="Ingrese la talla del producto." autocomplete="off">
+                      <label>Talla o medida:</label>
+                      <input type="text" class="form-control" name="talla" id="talla" maxlength="15" placeholder="Ingrese la talla o medida del producto." autocomplete="off">
                     </div>
                     <div class="form-group col-lg-6 col-md-12">
                       <label>Color:</label>

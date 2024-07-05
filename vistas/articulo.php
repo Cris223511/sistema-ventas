@@ -65,10 +65,14 @@ if (!isset($_SESSION["nombre"])) {
         position: absolute;
       }
 
+      .contenedor_articulos .form-control,
+      .contenedor_articulos .form-control button {
+        font-size: 16px !important;
+      }
+
       .contenedor_articulos .form-control:not(textarea),
       .contenedor_articulos .form-control button:not(textarea) {
         height: 45px;
-        font-size: 16px;
         align-content: center;
       }
     </style>
@@ -89,7 +93,7 @@ if (!isset($_SESSION["nombre"])) {
                       </button>
                     </a>
                   <?php } ?>
-                  <a href="#" data-toggle="popover" data-placement="bottom" title="<strong>Productos</strong>" data-html="true" data-content="Módulo en donde se registran los productos para que sean utilizados en las ventas y proformas." style="color: #002a8e; font-size: 18px;">&nbsp;<i class="fa fa-question-circle"></i></a>
+                  <a href="#" data-toggle="popover" data-placement="bottom" title="<strong>Productos</strong>" data-html="true" data-content="Módulo en donde se registran los productos para que sean utilizados en las ventas." style="color: #002a8e; font-size: 18px;">&nbsp;<i class="fa fa-question-circle"></i></a>
                 </h1>
                 <div class="box-tools pull-right"></div>
                 <div class="panel-body table-responsive listadoregistros" style="overflow: visible; padding-left: 0px; padding-right: 0px; padding-bottom: 0px;">
@@ -216,8 +220,8 @@ if (!isset($_SESSION["nombre"])) {
                       <!-- form detalles -->
                       <div id="frmDetalles" class="col-lg-12 col-md-12" style="margin: 0 !important; padding: 0 !important;">
                         <div class="form-group col-lg-6 col-md-12">
-                          <label>Talla:</label>
-                          <input type="text" class="form-control" name="talla" id="talla" maxlength="15" placeholder="Ingrese la talla del producto." autocomplete="off">
+                          <label>Talla o medida:</label>
+                          <input type="text" class="form-control" name="talla" id="talla" maxlength="15" placeholder="Ingrese la talla o medida del producto." autocomplete="off">
                         </div>
                         <div class="form-group col-lg-6 col-md-12">
                           <label>Color:</label>

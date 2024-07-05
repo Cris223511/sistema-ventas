@@ -65,8 +65,12 @@ if (!isset($_SESSION["nombre"])) {
 
       .contenedor_articulos .form-control,
       .contenedor_articulos .form-control button {
-        height: 45px !important;
         font-size: 16px !important;
+      }
+      
+      .contenedor_articulos .form-control:not(textarea),
+      .contenedor_articulos .form-control button:not(textarea) {
+        height: 45px;
         align-content: center;
       }
 
@@ -430,7 +434,7 @@ if (!isset($_SESSION["nombre"])) {
                   <?php } ?>
                   <!-- <a href="articulo_form.php"><button class="btn btn-warning" id="btnagregar"><i class="fa fa-cart-plus"></i> Agregar productos</button></a> -->
                   <a href="#" data-toggle="popover" data-placement="bottom" title="<strong>Ventas</strong>" data-html="true" data-content="Módulo para registrar las ventas de los productos<br><br><strong>Nota:</strong> Al hacer la venta, el stock del producto vendido se reduce (no puede vender productos con stock de 0)." style="color: #002a8e; font-size: 18px;">&nbsp;<i class="fa fa-question-circle"></i></a>
-                  </h1>
+                </h1>
                 <div class="box-tools pull-right">
                 </div>
                 <div class="panel-body table-responsive listadoregistros" style="overflow: visible; padding-left: 0px; padding-right: 0px; padding-bottom: 0px;">
@@ -1135,17 +1139,10 @@ if (!isset($_SESSION["nombre"])) {
                     <label>Stock mínimo(*):</label>
                     <input type="number" class="form-control" name="stock_minimo" id="stock_minimo" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="6" onkeydown="evitarNegativo(event)" onpaste="return false;" onDrop="return false;" min="1" placeholder="Ingrese el stock mínimo." required>
                   </div>
-                  <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                  <div class="form-group col-lg-12 col-md-12 col-sm-12">
                     <label>Imagen:</label>
                     <input type="file" class="form-control" name="imagen" id="imagen2" accept=".jpg,.jpeg,.png,.jfif,.bmp">
                     <input type="hidden" name="imagenactual" id="imagenactual">
-                  </div>
-                  <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                    <label>Descripción:</label>
-                    <input type="text" class="form-control" name="descripcion" id="descripcion5" maxlength="1000" placeholder="Ingrese la descripción del producto." autocomplete="off">
-                    <div style="display: flex; justify-content: end;">
-                      <div id="camera"></div>
-                    </div>
                   </div>
                   <!-- <div class="form-group col-lg-6 col-md-12 col-sm-12">
                         <div>
@@ -1170,12 +1167,16 @@ if (!isset($_SESSION["nombre"])) {
                   <!-- form detalles -->
                   <div id="frmDetalles" class="col-lg-12 col-md-12" style="margin: 0 !important; padding: 0 !important;">
                     <div class="form-group col-lg-6 col-md-12">
-                      <label>Talla:</label>
-                      <input type="text" class="form-control" name="talla" id="talla" maxlength="15" placeholder="Ingrese la talla del producto." autocomplete="off">
+                      <label>Talla o medida:</label>
+                      <input type="text" class="form-control" name="talla" id="talla" maxlength="15" placeholder="Ingrese la talla o medida del producto." autocomplete="off">
                     </div>
                     <div class="form-group col-lg-6 col-md-12">
                       <label>Color:</label>
                       <input type="text" class="form-control" name="color" id="color" maxlength="30" placeholder="Ingrese el color del producto." autocomplete="off">
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                      <label>Descripción:</label>
+                      <textarea class="form-control" name="descripcion" id="descripcion5" maxlength="1000" rows="4" placeholder="Ingrese la descripción del producto." autocomplete="off"></textarea>
                     </div>
                   </div>
                   <!-- end form detalles -->
